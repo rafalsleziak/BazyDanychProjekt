@@ -24,6 +24,7 @@ namespace BazyDanych
             InitializeComponent();
             //baza.InsertListwa("23-01-02", "sosna","bialy",false,"czarna",(float)3.25);
             dataset = baza.LoadData("SELECT * FROM listwa");
+            dataGridView1.ReadOnly = true;
             dataGridView1.DataSource = dataset.Tables[0].DefaultView;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
